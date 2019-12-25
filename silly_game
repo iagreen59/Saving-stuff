@@ -1,0 +1,22 @@
+from random import randint
+
+my_input = randint(1,10)
+attempt = 0
+
+while attempt < 3:
+    user_input = int(input('guess a number between 1 and 10 : '))
+    
+    if user_input == my_input:
+        print('YOU WIN!!!')
+        attempt = 4
+    
+    if user_input < my_input:
+        print('Too small!')
+    
+    if user_input > my_input:
+        print('Too big!')
+    
+    attempt += 1
+    
+if attempt == 3 and user_input != my_input:
+    print('GAME OVER')
